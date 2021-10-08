@@ -5,15 +5,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Спойлеры</title>
+	<title>Спойлер, бургер, модал</title>
 </head>
 
 <body>
 	<div class="wrapper">
 
-
-
-		<header class="header">
+		<header class="header lock-padding" id="header">
 			<div class="header__container">
 				<a href="" class="header__logo"></a>
 				<div class="header__menu menu">
@@ -41,7 +39,9 @@
 								</ul>
 							</li>
 							<li>
-								<a href="" class="menu__link">Страница №2</a>
+								<!-- <a href="" class="menu__link">Страница №2</a> -->
+								<a href="#popup" class="menu__link menu__popup popup-link">Попап №1</a>
+
 							</li>
 						</ul>
 					</nav>
@@ -49,139 +49,286 @@
 			</div>
 		</header>
 
-		<main class="page">
-			<section class="block-wrap">
-				<div class="block-wrap__container">
-					<div data-spollers data-one-spoller class="block block_1">
-						<div class="block__item">
-							<button tabindex="-1" type="button" data-spoller class="block__title"><span>Обычный спойлер
-									№1</span></button>
-							<div class="block__text">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
-								Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
-								aspernatur, labore fuga aliquam!
-							</div>
-						</div>
-						<div class="block__item">
-							<button tabindex="-1" type="button" data-spoller class="block__title">Обычный спойлер
-								№2</button>
-							<div class="block__text">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
-								Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
-								aspernatur, labore fuga aliquam!
-							</div>
-						</div>
-						<div class="block__item">
-							<button tabindex="-1" type="button" data-spoller class="block__title">Обычный спойлер
-								№3</button>
-							<div class="block__text">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
-								Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
-								aspernatur, labore fuga aliquam!
-							</div>
+
+		<section class="blocks">
+			<div class="container">
+				<div data-spollers data-one-spoller class="block block_1">
+					<div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">
+							<span>Обычный спойлер №1</span>
+						</button>
+						<div class="block__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
+							Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
+							aspernatur, labore fuga aliquam!
 						</div>
 					</div>
-					<div data-spollers="650,min" class="block block_2">
-						<div class="block__item">
-							<button tabindex="-1" type="button" data-spoller class="block__title">Спойлер работает на
-								экранах >= 650px</button>
-							<div class="block__text">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
-								Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
-								aspernatur, labore fuga aliquam!
-							</div>
+					<div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">
+							Обычный спойлер №2
+						</button>
+						<div class="block__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
+							Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
+							aspernatur, labore fuga aliquam!
 						</div>
 					</div>
-					<div data-spollers="800,max" class="block block_3">
-						<div class="block__item">
-							<button tabindex="-1" type="button" data-spoller class="block__title">Спойлер #1 работает на
-								экранах <= 800px</button> <div class="block__text">
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam
-									magni. Nulla, laborum illo enim qui eum architecto soluta, quos provident natus
-									nobis a et aspernatur, labore fuga aliquam!
+					<div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">Обычный спойлер
+							№3</button>
+						<div class="block__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
+							Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
+							aspernatur, labore fuga aliquam!
+						</div>
+					</div>
+				</div>
+				<div data-spollers="650,min" class="block block_2">
+					<div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">Спойлер работает на
+							экранах >= 650px</button>
+						<div class="block__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
+							Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
+							aspernatur, labore fuga aliquam!
+						</div>
+					</div>
+				</div>
+				<div data-spollers="800,max" class="block block_3">
+					<div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">Спойлер #1 работает на
+							экранах меньше= 800px
+						</button>
+						<div class="block__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam
+							magni. Nulla, laborum illo enim qui eum architecto soluta, quos provident natus
+							nobis a et aspernatur, labore fuga aliquam!
 						</div>
 					</div>
 					<div class="block__item">
 						<button tabindex="-1" type="button" data-spoller class="block__title">Спойлер #2 работает на
-							экранах <= 800px</button> <div class="block__text">
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
-								Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
-								aspernatur, labore fuga aliquam!
+							экранах меньше= 800px
+						</button>
+						<div class="block__text">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic numquam magni.
+							Nulla, laborum illo enim qui eum architecto soluta, quos provident natus nobis a et
+							aspernatur, labore fuga aliquam!
+						</div>
 					</div>
 				</div>
-	</div>
-	</div>
-	</section>
-	<section class="page__section page__section_1 container">
-		<h1 class="page__title">Отличная статья</h1>
-		<div class="page__text">
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
+			</div>
+
+
+		</section>
+
+		<section class="content">
+			<div class="container">
+				<div class="content__section content__section_row">
+					<div class="content__body">
+						<h1 class="content__title">Только вперед!</h1>
+						<div class="content__text">
+							<p>Lorem ipsum <a class="popup-link" href="#popup_2">Попап №2</a> dolor sit amet
+								consectetur, adipisicing elit. Commodi, consequuntur eveniet! Sequi, debitis minus
+								quisquam provident tenetur atque assumenda ut voluptatum sapiente ipsum illo harum
+								facere officia maiores blanditiis et.</p>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, consequuntur eveniet!
+								Sequi, debitis minus quisquam provident tenetur atque assumenda ut voluptatum sapiente
+								ipsum illo harum facere officia maiores blanditiis et.</p>
+						</div>
+					</div>
+					<a href="#image" class="content__image popup-link">
+						<img src="img/image.jpg" alt="">
+					</a>
+				</div>
+
+			</div>
+		</section>
+
+
+		<div id="popup" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#header" class="popup__close close-popup">X</a>
+					<div class="popup__title">Это модальное окно №1</div>
+					<div class="popup__text">
+						<a class="popup-link" href="#popup_2">Попап №2</a> ipsum dolor sit amet consectetur adipisicing
+						elit. Aut enim vero veritatis velit assumenda soluta sed ad, omnis alias placeat debitis
+						voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
-	<section class="page__section page__section_2">
-		<h2 class="page__sub-title">Отличный раздел сайта</h2>
-		<div class="page__text">
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
+		<div id="popup_2" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#header" class="popup__close close-popup">X</a>
+					<div class="popup__title">Это модальное окно №2</div>
+					<div class="popup__text">
+						ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda
+						soluta sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a
+						blanditiis! Quidem!
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
-	<section class="page__section page__section_3">
-		<h2 class="page__sub-title">Отличный раздел сайта</h2>
-		<div class="page__text">
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia natus
-				voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos officiis
-				provident quaerat libero.</p>
+		<div id="image" class="popup">
+			<div class="popup__body">
+				<div class="popup__content popup__content_image">
+					<a href="#header" class="popup__close close-popup">X</a>
+					<div class="popup__image">
+						<img src="img/image.jpg" alt="">
+					</div>
+				</div>
+			</div>
 		</div>
-	</section>
-	</main>
+
+
+
+
+		<section class="page">
+
+			<section class="page__section page__section_1 container">
+				<h1 class="page__title">Отличная статья</h1>
+				<div class="page__text">
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+				</div>
+			</section>
+			<section class="page__section page__section_2">
+				<h2 class="page__sub-title">Отличный раздел сайта</h2>
+				<div class="page__text">
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+				</div>
+			</section>
+			<section class="page__section page__section_3">
+				<h2 class="page__sub-title">Отличный раздел сайта</h2>
+				<div class="page__text">
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus neque ratione modi mollitia
+						natus
+						voluptas culpa architecto officiis, sed dolorem quasi? Voluptatem laborum ad assumenda quos
+						officiis
+						provident quaerat libero.</p>
+				</div>
+			</section>
+		</section>
 
 	</div>
 	<script src="js/script.js"></script>
