@@ -460,3 +460,5 @@ document.addEventListener('DOMContentLoaded', function () {
 		reader.readAsDataURL(file);
 	}
 });
+
+

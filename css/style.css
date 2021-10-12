@@ -98,7 +98,7 @@ body._touch .menu__list>li._active .menu__arrow {
 /* ------------------ */
 .wrapper {
 	min-height: 100%;
-	padding: 130px 30px;
+	padding: 130px 30px 0;
 }
 
 /* ------------------ */
@@ -797,6 +797,10 @@ textarea.form__input {
 	background-color: #7a956b;
 }
 
+.page__section_4 {
+background-color: #333;
+}
+
 .page__title {
 	font-size: 40px;
 	margin: 0px 0px 20px 0px;
@@ -823,6 +827,10 @@ textarea.form__input {
 	justify-content: space-between;
 	margin-bottom: 30px;
 }
+
+
+
+/* +++++++++++++++++++++++++++++++++ */
 
 .triangle-up {
 	width: 0;
@@ -869,4 +877,111 @@ textarea.form__input {
 	border-right: 5px solid transparent;
 	border-bottom: 10px solid #fff;
 }
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.tabs-wrap .tabs {
+	margin: 0;
+}
+
+.tabs-wrap .tabs__items {
+	display: flex;
+}
+
+.tabs-wrap .tabs__item {
+	flex: 0 1 33.333%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+}
+
+.tabs-wrap .tabs__item span {
+	position: relative;
+	z-index: 2;
+}
+
+.tabs-wrap .tabs__block {
+	position: relative;
+	padding: 20px;
+	font-size: 18px;
+	line-height: 24px;
+	display: none;
+}
+
+.tabs-wrap .tabs__block:before {
+	content: "";
+	height: 50px;
+	width: 33.333%;
+	position: absolute;
+	top: -50px;
+}
+
+.tabs-wrap .tabs__block:nth-child(1) {
+	background-color: #794f45;;
+}
+
+.tabs-wrap .tabs__block:nth-child(1):before {
+	background-color: #794f45;;
+	left: 0;
+}
+
+.tabs-wrap .tabs__block:nth-child(2) {
+	background-color: #9278aa;
+}
+
+.tabs-wrap .tabs__block:nth-child(2):before {
+	background-color: #9278aa;
+	left: 33.333%;
+}
+
+.tabs-wrap .tabs__block:nth-child(3) {
+	background-color: #97c67d;
+}
+
+.tabs-wrap .tabs__block:nth-child(3):before {
+	background-color: #97c67d;
+	right: 0;
+}
+
+.tabs-wrap .tabs__block:target {
+	display: block;
+}
+
+.tabs-wrap .text {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+@media (max-width: 600px) {
+	.tabs-wrap .tabs__item span {
+		display: block;
+		width: 100px;
+		padding: 0px 5px;
+		white-space: nowrap;
+		text-align: center;
+		overflow: hidden;
+		font-size: 14px;
+		text-overflow: ellipsis;
+	}
+}
+
+
+@media (max-width: 385px) {
+	.tabs-wrap .tabs__item span {
+		width: 80px;
+		font-size: 10px;
+	}
+}
+
+
+
+
+
+
+
 
